@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useBillStore } from "../store/billStore";
-import PDFViewer from "../components/worker";
 import { useNavigate } from "react-router-dom";
 import EmptyState from "../components/EmptyPage";
 
