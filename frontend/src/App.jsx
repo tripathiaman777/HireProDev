@@ -10,7 +10,7 @@ import Profile from "./pages/Profile";
 import Billings from "./pages/Billings";
 import Products from "./pages/Products";
 import Purchase from "./pages/Purchase";
-import PDFViewer from "./components/worker";
+import PDFViewer from "./components/Worker.jsx";
 import { Toaster } from "react-hot-toast";
 
 const ProtectedRoute = ({ children }) => {
