@@ -26,12 +26,15 @@ export async function createOrder(req, res) {
 
     // Generate PDF and save it locally
     const pdfPath = await generatePDF(orderDetails);
-
+    console.log("Pdf path");
+    console.log(pdfPath);
     if (pdfPath) {
       // Read the PDF file as a Buffer
       const pdfBuffer = fs.readFileSync(pdfPath);
 
       // Update the order with the PDF Buffer
+      console.log("Pdf buffer");
+      console.log(pdfBuffer);
       order.receipt = pdfBuffer;
       await order.save();
 
@@ -53,6 +56,7 @@ export async function createOrder(req, res) {
 
 export async function getAllBills(req, res) {
   try {
+    console.log("Heyyyy");
     const { userId } = req; // Extract userId from request
     // const orderBills = await Order.find({ user: userId }).populate("receipt");
     const orderBills = await Order.find({ user: userId }).sort({

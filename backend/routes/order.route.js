@@ -7,12 +7,13 @@ const router = express.Router();
 router.post("/create", verifyToken, createOrder);
 router.get("/getAllBills", verifyToken, getAllBills);
 router.get("/receipt/:orderId", async (req, res) => {
+  console.log("Hello There");
   try {
     const { orderId } = req.params;
     // console.log(orderId);
     const order = await Order.findById(orderId);
 
-    // console.log(order.receipt);
+    console.log(order);
     if (!order || !order.receipt) {
       return res.status(404).send("PDF not found");
     }
