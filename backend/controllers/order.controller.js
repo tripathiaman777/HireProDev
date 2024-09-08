@@ -1,5 +1,6 @@
 import Order from "../models/order.model.js"; // Import the Order model
-import { generatePDF } from "../lib/puppeteer2.js"; // Import your PDF generation function
+// import { generatePDF } from "../lib/puppeteer2.js"; // Import your PDF generation function
+import { generatePDF } from "../lib/htmlToPdf.js"; // Import your PDF generation function
 import fs from "fs";
 export async function createOrder(req, res) {
   try {
