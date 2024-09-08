@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon backend/index.js",
     "start": "node backend/index.js",
-    "build": "npm i && npm i --prefix frontend && npm run build --prefix frontend"
+    "build": "npm i && npm i --prefix frontend && npm i vite && npm run build --prefix frontend"
   },
   "keywords": [],
   "type": "module",
@@ -26,6 +26,7 @@
     "mongoose": "^8.6.1",
     "node-mailjet": "^6.0.6",
     "puppeteer": "^23.3.0",
-    "puppeteer-html-pdf": "^4.0.8"
+    "puppeteer-html-pdf": "^4.0.8",
+    "vite": "^5.4.3"
   }
 }
