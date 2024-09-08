@@ -1,1 +1,1 @@
-export const BROWSER_URL= "http://localhost:5000";
+export const BROWSER_URL= "https://hireprodev.onrender.com";
