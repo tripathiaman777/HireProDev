@@ -6,7 +6,7 @@ import { Loader } from "lucide-react";
 import { useState } from "react";
 
 export default function ButtonDefault() {
-  const { cart } = useCartStore();
+  const { cart, emptyCart } = useCartStore();
   const { order, addItem } = useOrderStore();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
@@ -16,6 +16,7 @@ export default function ButtonDefault() {
     addItem(cart);
     setTimeout(() => {
       navigate("/purchase");
+      emptyCart();
       setIsLoading(false);
     }, 1000);
   };
