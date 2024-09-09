@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 function PlaceOrder() {
   const [isLoading, setIsLoading] = useState(false);
-  const { purchaseItem, order } = useOrderStore();
+  const { purchaseItem, order, emptyOrder } = useOrderStore();
   const navigate = useNavigate();
   const confirmBilling = () => {
     purchaseItem(
@@ -14,6 +14,7 @@ function PlaceOrder() {
     );
     toast.success("Order Placed Successfully");
     setTimeout(() => {
+      emptyOrder();
       navigate("/billing");
     }, 2000);
   };

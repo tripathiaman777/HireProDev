@@ -7,6 +7,7 @@ axios.defaults.withCredentials = true;
 export const useOrderStore = create((set) => ({
   order: [],
   orderProcessing: false,
+  emptyOrder: () => set({ order: [] }),
   addItem: (items) =>
     set((state) => {
       const newItems = Array.isArray(items) ? items : [items];
